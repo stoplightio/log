@@ -138,7 +138,7 @@ func (s *LogSuite) TestCallerInfo(c *C) {
 		logFunc("blah")
 		// Then
 		c.Assert(l.b.String(), Equals, fmt.Sprintf(
-			"%s log_test.go[138] github.com/mailgun/log.(*LogSuite).TestCallerInfo", severity))
+			"%s log_test.go[138] github.com/stoplightio/log.(*LogSuite).TestCallerInfo", severity))
 	}
 }
 
@@ -149,7 +149,7 @@ func (s *LogSuite) TestCallerInfoLogfmt(c *C) {
 	// When
 	Logfmt(0, SeverityInfo, "blah")
 	// Then
-	c.Assert(l.b.String(), Equals, "INFO log_test.go[150] github.com/mailgun/log.(*LogSuite).TestCallerInfoLogfmt")
+	c.Assert(l.b.String(), Equals, "INFO log_test.go[150] github.com/stoplightio/log.(*LogSuite).TestCallerInfoLogfmt")
 }
 
 type callerLogger struct {
